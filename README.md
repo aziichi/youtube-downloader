@@ -18,9 +18,7 @@ Also don't be shy to add something of your own to this project and contribute to
 
 2. Make sure to check the pip, and tcl/tk and IDLE checkbox during the python installation.
 
-3. Download ffmpeg from <br> (7z) https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z
-<br>
-(zip) https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
+3. Download ffmpeg from <br> (7z) https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z <br> (zip) https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
 
 4. Extract it and copy `ffmpeg.exe` to the python directory (where you installed python)
 
