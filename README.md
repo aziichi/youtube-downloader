@@ -16,7 +16,8 @@ Also don't be shy to add something of your own to this project and contribute to
 ## Installation Steps
 1. Download python
 
-2. Make sure to check the pip, and tcl/tk and IDLE checkbox during the python installation.
+2. Make sure to check the pip, and tcl/tk and IDLE checkbox during the python installation (for windows users only).
+For others, make sure you have pip and Tkinter installed.
 
 3. Download ffmpeg from <br> (7z) https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z <br> (zip) https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
 
@@ -32,8 +33,16 @@ Also don't be shy to add something of your own to this project and contribute to
 
 - You can exit from the downloader using escape (Esc) key on your keyboard. 
 
+## Dependencies
+- pytube
+- keyboard
+- ffmpeg-python
+- Tkinter
+
 ## Special Thanks to
 - pytube module - Without it this project would not be possible.
+
 - keyboard module - For providing easy access to keyboard events.
+
 - ffmpeg-python - For providing a great ffmpeg wrapper for python.
 
