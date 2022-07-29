@@ -1,10 +1,5 @@
 # ----- Imports -------
-from asyncio import sleep
-from cgi import print_exception
-from multiprocessing import connection
 import os
-from types import NoneType
-from pkg_resources import ResolutionError
 import pytube
 import ffmpeg
 import keyboard
@@ -12,6 +7,25 @@ from tkinter import filedialog, Tk
 from urllib.error import URLError
 
 # ------- Functions ----------
+
+def get_clear_command():
+    '''
+        Gets the clear command for the terminal based on platform.
+
+        Arguments:
+        No arguments
+
+        Return:
+        String -> Command to clear the terminal.
+    '''
+
+    if os.name == "nt":
+        return "cls"
+    
+    return "clear"
+
+
+
 
 def download_video(filedir, yt, resolution="720p", mode="search"):
     '''
@@ -49,8 +63,7 @@ def download_video(filedir, yt, resolution="720p", mode="search"):
         stream[0].download(output_path=filedir)
     
     else:
-        print_exception("Invalid mode entered as parameter.")
-        return 1
+        raise Exception("Invalid mode entered as parameter.")
     
     audio_stream = yt.streams.get_audio_only()
     audio_stream.download(output_path=filedir, filename=f"{audio_stream.default_filename[0:-4]}_audio.mp4")
@@ -259,7 +272,7 @@ def batch_download():
 
 ### Downloader code
 
-os.system("cls")
+os.system(get_clear_command())
 print("----Welcome to the Youtube Downloader----",)
 print("\nPress the Esc key at any time to exit.")
 print("\n\nPress the Enter key to continue.")
@@ -268,7 +281,7 @@ print("\n\nPress the Enter key to continue.")
 keyboard.add_hotkey('esc', lambda:  os.abort())
 keyboard.wait('enter', suppress=True)
 
-os.system("cls")
+os.system(get_clear_command())
 
 try:
     while(True):
@@ -292,7 +305,7 @@ try:
             print("Invalid option selected")
             continue
 
-        os.system("cls")
+        os.system(get_clear_command())
         print("Download Completed!")
 
 except URLError:
