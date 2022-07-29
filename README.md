@@ -7,8 +7,8 @@
 - Search Youtube
 - Video download as mp4
 - Audio download as mp3
+- Batch download multiple videos at once
 
-I have plans to add more features to it like batch downloads and downloading an entire playlist. Let's see if they become a reality 😜
 
 Also don't be shy to add something of your own to this project and contribute to it.
 <br>
